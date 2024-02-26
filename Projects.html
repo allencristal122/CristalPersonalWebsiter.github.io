@@ -1,0 +1,89 @@
+<!DOCTYPE html> <!-- Document type declaration -->
+<html lang="en"> <!-- Opening HTML tag with language attribute -->
+<head> <!-- Opening head tag -->
+    <meta charset="UTF-8"> <!-- Character encoding -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Compatibility with Internet Explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport for responsiveness -->
+    <title>Vince Allen Cristal - Personal Website</title> <!-- Title of the webpage -->
+    <link rel="stylesheet" href="Projects.css"> <!-- Link to external stylesheet -->
+</head> <!-- Closing head tag -->
+<body> <!-- Opening body tag -->
+    <header class="header"> <!-- Opening header tag with class attribute -->
+        <a href="#" class="logo"><h2>Personal Portfolio</h2></a> <!-- Anchor tag with class attribute -->
+        <!-- Hamburger menu button -->
+        <button class="hamburger" onclick="toggleMenu()"> 
+            <!-- Hamburger menu bars -->
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
+        <nav class="navigation"> <!-- Opening navigation tag with class attribute -->
+            <!-- Navigation links with custom style -->
+            <a href="index.html" style="--i:1">Home</a>
+            <a href="About.html" style="--i:2">About</a>
+            <a href="Skills.html" style="--i:3">Skills</a>
+            <a href="Education.html" style="--i:4">Education</a>
+            <a href="Experience.html" style="--i:5">Experience</a>
+            <a href="Contact.html" style="--i:6">Contacts</a>
+        </nav> <!-- Closing navigation tag -->
+    </header> <!-- Closing header tag -->
+    <section class="personal-project"> <!-- Opening section tag with class attribute -->
+        <h1>Projects</h1> <!-- Heading 1 -->
+        <h3>Here are my projects I made during studying Information Technology.</h3> <!-- Heading 3 -->
+        <hr> <!-- Horizontal line -->
+        <h2>Project in Video Format</h2><hr> <!-- Heading 2 -->
+        <div class="video-wrapper"> <!-- Opening div tag with class attribute -->
+            <div class="video-container"> <!-- Opening div tag with class attribute -->
+                <video controls> <!-- Video tag with controls attribute -->
+                    <source src="Video/MMP.mp4" type="video/mp4"> <!-- Source tag with source and type attributes -->
+                </video> <!-- Closing video tag -->
+                <div class="video-description"> <!-- Opening div tag with class attribute -->
+                    Multimedia Project <!-- Video description -->
+                </div> <!-- Closing div tag -->
+            </div> <!-- Closing div tag -->
+            <div class="video-container"> <!-- Opening div tag with class attribute -->
+                <video controls> <!-- Video tag with controls attribute -->
+                    <source src="Video/Social_Space.mp4" type="video/mp4"> <!-- Source tag with source and type attributes (space replaced with underscore) -->
+                </video> <!-- Closing video tag -->
+                <div class="video-description"> <!-- Opening div tag with class attribute -->
+                    Social Space <!-- Video description -->
+                </div> <!-- Closing div tag -->
+            </div> <!-- Closing div tag -->
+            <div class="video-container"> <!-- Opening div tag with class attribute -->
+                <video controls> <!-- Video tag with controls attribute -->
+                    <source src="Video/Queue_Activity.mp4" type="video/mp4"> <!-- Source tag with source and type attributes (space replaced with underscore) -->
+                </video> <!-- Closing video tag -->
+                <div class="video-description"> <!-- Opening div tag with class attribute -->
+                    Queue Project <!-- Video description -->
+                </div> <!-- Closing div tag -->
+            </div> <!-- Closing div tag -->
+        </div> <!-- Closing div tag -->
+    </section> <!-- Closing section tag -->
+    <section class="img_link"> <!-- Opening section tag with class attribute -->
+        <hr> <!-- Horizontal line -->
+        <h2>Project in Link Format</h2><hr> <!-- Heading 2 -->
+        <div class="image-wrapper"> <!-- Opening div tag with class attribute -->
+            <div class="image-container"> <!-- Opening div tag with class attribute -->
+                <a href="https://drive.google.com/file/d/168-kcN3q8Iq8CMrhWThosDKuWnMjrfjo/view?usp=drivesdk" target="_blank"> <!-- Anchor tag with href and target attributes -->
+                    <img src="images/StarfireStrike.png" alt="Picture of Project"> <!-- Image tag with source and alt attributes (space replaced with underscore) -->
+                </a> <!-- Closing anchor tag -->
+                <div class="image-description"> <!-- Opening div tag with class attribute -->
+                    Starfire Strike <!-- Image description -->
+                </div> <!-- Closing div tag -->
+            </div> <!-- Closing div tag -->
+            <div class="image-container"> <!-- Opening div tag with class attribute -->
+                <a href="https://drive.google.com/file/d/1JgFlozJ4FdUNFqVEoYihpmPXqGVq8q0i/view?usp=drive_link" target="_blank"> <!-- Anchor tag with href and target attributes -->
+                    <img src="images/Pharmacy.jpg" alt="Picture of Project"> <!-- Image tag with source and alt attributes -->
+                </a> <!-- Closing anchor tag -->
+                <div class="image-description"> <!-- Opening div tag with class attribute -->
+                    Pharmacy Manager <!-- Image description -->
+                </div> <!-- Closing div tag -->
+            </div> <!-- Closing div tag -->
+        </div> <!-- Closing div tag -->
+    </section> <!-- Closing section tag -->
+    <footer> <!-- Opening footer tag -->
+        <p>&copy; 2024 Personal Website. All rights reserved.</p> <!-- Copyright notice -->
+    </footer> <!-- Closing footer tag -->  
+    <script src="main1.js"></script> <!-- Script tag linking to external JavaScript file -->  
+</body> <!-- Closing body tag -->
+</html> <!-- Closing HTML tag -->

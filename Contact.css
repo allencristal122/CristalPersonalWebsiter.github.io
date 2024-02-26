@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Use Poppins font */
+}
+
+/* Body styles */
+body {
+    color: #ededed; /* Text color */
+    background-image: url(images/wallpaper.jpeg); /* Background image */
+    background-size: cover; /* Cover the entire background */
+}
+
+/* Header styles */
+.header {
+    position: fixed; /* Fixed position */
+    top: 0;
+    left: 0;
+    z-index: 100; /* Ensure it stays on top of other elements */
+    width: 100%;
+    display: flex;
+    background: transparent; /* Transparent background */
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+    background-color: black; /* Black background color */
+}
+
+/* Logo styles */
+.logo {
+    position: relative; /* Relative positioning */
+    color: #fff; /* White text color */
+    font-weight: 600;
+    font-size: 25px;
+    text-decoration: none;
+    margin-left: 70px; /* Left margin */
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards; /* Animation */
+}
+
+/* Hamburger styles */
+.hamburger {
+    display: none;
+}
+
+/* Navigation link styles */
+.navigation a {
+    display: inline-block;
+    color: #fff;
+    font-size: 25px;
+    margin-left: 35px; /* Left margin */
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.5s;
+    opacity: 0;
+    margin-right: 15px; /* Right margin */
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+/* Navigation link hover styles */
+.navigation a:hover {
+    color: black;
+    background-color: #cf9fff;
+    padding: 12px;
+    border-radius: 30px;
+}
+
+/* Personal skills section styles */
+.personal-skills {
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 120px; /* Top margin */
+    height: 150px;
+}
+
+/* Personal skills section heading styles */
+.personal-skills h1 {
+    font-size: 40px;
+    margin-bottom: 20px; /* Bottom margin */
+    opacity: 0;
+    animation: slideRight 1s ease forwards; /* Animation */
+}
+
+/* Personal skills section subheading styles */
+.personal-skills h3 {
+    padding-bottom: 30px;
+    opacity: 0;
+    animation: slideLeft 2s ease forwards; /* Animation */
+}
+
+/* Horizontal rule styles */
+.personal-skills hr {
+    width: 36cm; /* Width */
+    margin: 0 auto; /* Center horizontally */
+}
+
+/* Skill icon styles */
+.skill-icon {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 10px;
+    color: #cf9fff;
+    border: 2px solid #cf9fff;
+    text-decoration: none;
+    transition: 0.7s ease;
+    margin: 60px;
+    margin-top: 40px;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    margin-bottom: -150px;
+}
+
+/* Skill icon hover styles */
+.skill-icon:hover {
+    background: #cf9fff;
+    color: black;
+    box-shadow: 0 0 20px #cf9fff;
+}
+
+/* Skill icon text styles */
+.skill-icon i {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/* Skill icon description styles */
+.skill-icon span {
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+/* Footer styles */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    font-size: 20px;
+    margin-top: 450px; /* Top margin */
+    opacity: 0;
+    animation: slideTop .5s ease forwards; /* Animation */
+}
+
+/* Keyframe animations */
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/* Media query for screens up to 768px */
+@media only screen and (max-width: 768px) {
+    /* Center the logo */
+    .logo {
+        text-align: center;
+        margin-left: 30px;
+        margin-right: 30px;
+        color: #fff;
+        font-weight: 600;
+        font-size: 25px;
+        text-decoration: none;
+        cursor: default;
+        opacity: 0;
+        animation: slideRight 1s ease forwards; /* Animation */
+    }
+
+    /* Hamburger menu icon styles */
+    .hamburger {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 101; /* Ensure it's above the navigation */
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        background-color: transparent;
+        border: none;
+    }
+
+    /* Hamburger menu bar styles */
+    .hamburger .bar {
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        transition: all 0.3s ease;
+    }
+
+    /* Additional styles for active (open) hamburger menu */
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0; /* Hide middle bar when active */
+    }
+
+    .hamburger.active .bar:first-child {
+        transform: translateY(8px) rotate(45deg); /* Rotate first bar */
+    }
+
+    .hamburger.active .bar:last-child {
+        transform: translateY(-8px) rotate(-45deg); /* Rotate last bar */
+    }
+
+    /* Navigation links for smaller screens */
+    .navigation {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 70%;
+        background-color: #000;
+        padding-top: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    /* Show navigation links when active (open) */
+    .navigation.active {
+        transform: translateX(0%);
+    }
+
+    /* Navigation link styles */
+    .navigation a {
+        color: #fff;
+        font-size: 25px;
+        margin: 20px;
+        text-decoration: none;
+    }
+
+    /* Adjust margin for personal skills section */
+    .personal-skills {
+        margin-top: 80px;
+    }
+
+    /* Adjust styles for smaller screens */
+    .personal-skills h3 {
+        padding-bottom: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        line-height: 30px;
+    }
+
+    /* Adjust styles for smaller screens */
+    .personal-skills hr {
+        width: 300px;
+    }
+
+    /* Adjust styles for smaller screens */
+    .skill-icon {
+        width: 150px;
+        height: 150px;
+        margin: 30px;
+    }
+
+    /* Adjust margin for footer */
+    footer {
+        display: none;
+    }
+}

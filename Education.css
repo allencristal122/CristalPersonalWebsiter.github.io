@@ -1,0 +1,660 @@
+* {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    font-family: 'Poppins', sans-serif; /* Set default font */
+}
+
+/* Body styles */
+body {
+    color: #ededed; /* Text color */
+    background-image: url(images/wallpaper.jpeg); /* Background image */
+    background-size: cover; /* Cover the entire background */
+}
+
+/* Header styles */
+.header {
+    position: fixed; /* Fixed position */
+    top: 0;
+    left: 0;
+    z-index: 100; /* Ensure it stays on top of other elements */
+    width: 100%;
+    display: flex;
+    background: transparent; /* Transparent background */
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+    background-color: black; /* Black background color */
+}
+
+/* Logo styles */
+.logo {
+    position: relative; /* Relative positioning */
+    color: #fff; /* White text color */
+    font-weight: 600;
+    font-size: 25px;
+    text-decoration: none;
+    margin-left: 70px; /* Left margin */
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards; /* Animation */
+}
+
+/* Hamburger styles */
+.hamburger {
+    display: none;
+}
+
+/* Navigation link styles */
+.navigation a {
+    display: inline-block;
+    color: #fff;
+    font-size: 25px;
+    margin-left: 35px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.5s;
+    opacity: 0;
+    margin-right: 15px;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+/* Navigation link hover styles */
+.navigation a:hover {
+    color: black;
+    background-color: #cf9fff;
+    padding: 12px;
+    border-radius: 30px;
+}
+
+/* High section styles */
+.high {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    justify-content: space-between;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    padding: 70px 10% 0;
+    align-items: center;
+    margin-top: -200px;
+    margin-bottom: -50px;
+}
+
+/* Heading container styles */
+.hc {
+    max-width: 600px;
+    margin-left: 20px; /* Left margin */
+}
+
+/* Heading styles */
+.hc h3 {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+    line-height: 30px;
+    margin-top: 25px;
+    animation-delay: .7s;
+    margin-left: 70px; /* Left margin */
+    margin-bottom: 25px;
+}
+
+/* Paragraph styles */
+.hc p {
+    font-size: 20px;
+    line-height: 1cm;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+    text-align: justify;
+    margin-top: 30px;
+    margin-right: 20px; /* Right margin */
+}
+
+/* Picture container styles */
+.picture {
+    margin-right: 200px; /* Right margin */
+    padding-right: 20px;
+    text-align: right;
+    animation: slideRight 1s ease forwards;
+}
+
+/* Picture styles */
+.picture img {
+    width: 500px;
+    height: 400px;
+    border-radius: 50%;
+    border: 10px solid #cf9fff;
+    box-shadow: 0 0 20px rgba(125, 60, 255, 0.5),
+                0 0 40px rgba(60, 177, 255, 0.7),
+                0 0 80px rgba(125, 60, 255, 0.7),
+                0 0 120px rgba(60, 177, 255, 0.7);
+    background: radial-gradient(violet, skyblue, #f5a9bc);
+}
+
+/* Elem section styles */
+.elem {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    justify-content: space-between;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    padding: 70px 10% 0;
+    align-items: center;
+    margin-top: -40px;
+    margin-bottom: -50px;
+}
+
+/* Elem container styles */
+.ec {
+    max-width: 600px;
+    margin-left: 20px; /* Left margin */
+}
+
+/* Elem heading styles */
+.ec h3 {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+    line-height: 30px;
+    margin-top: 25px;
+    margin-left: 20px; /* Left margin */
+    margin-bottom: 25px;
+}
+
+/* Elem horizontal rule styles */
+.ec hr {
+    margin-left: -80px; /* Left margin */
+}
+
+/* Elem paragraph styles */
+.ec p {
+    font-size: 20px;
+    line-height: 1cm;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+    text-align: justify;
+    margin-top: 30px;
+    margin-left: -80px; /* Left margin */
+}
+
+/* Picture1 container styles */
+.picture1 {
+    margin-left: 200px; /* Left margin */
+    padding-left: 20px;
+    text-align: left;
+    animation: slideLeft 1s ease forwards;
+}
+
+/* Picture1 image styles */
+.picture1 img {
+    width: 500px;
+    height: 400px;
+    border-radius: 50%;
+    border: 10px solid #cf9fff;
+    box-shadow: 0 0 20px rgba(125, 60, 255, 0.5),
+                0 0 40px rgba(60, 177, 255, 0.7),
+                0 0 80px rgba(125, 60, 255, 0.7),
+                0 0 120px rgba(60, 177, 255, 0.7);
+    background: radial-gradient(violet, skyblue, #f5a9bc);
+}
+
+/* College section styles */
+.college {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    justify-content: space-between;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    padding: 70px 10% 0;
+    align-items: center;
+    margin-top: -200px;
+    margin-bottom: -50px;
+}
+
+/* Lc container styles */
+.lc {
+    max-width: 600px;
+    margin-left: 20px; /* Left margin */
+}
+
+/* Lc heading styles */
+.lc h3 {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+    line-height: 30px;
+    margin-top: 25px;
+    margin-left: 20px; /* Left margin */
+    margin-bottom: 25px;
+}
+
+/* Lc horizontal rule styles */
+.lc hr {
+    margin-left: -80px; /* Left margin */
+}
+
+/* Lc paragraph styles */
+.lc p {
+    font-size: 20px;
+    line-height: 1cm;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+    text-align: justify;
+    margin-top: 30px;
+    margin-left: -80px; /* Left margin */
+}
+
+/* Picture2 container styles */
+.picture2 {
+    margin-left: 200px; /* Left margin */
+    padding-left: 20px;
+    text-align: left;
+    animation: slideLeft 1s ease forwards;
+}
+
+/* Picture2 image styles */
+.picture2 img {
+    width: 500px;
+    height: 400px;
+    border-radius: 50%;
+    border: 10px solid #cf9fff;
+    box-shadow: 0 0 20px rgba(125, 60, 255, 0.5),
+                0 0 40px rgba(60, 177, 255, 0.7),
+                0 0 80px rgba(125, 60, 255, 0.7),
+                0 0 120px rgba(60, 177, 255, 0.7);
+    background: radial-gradient(violet, skyblue, #f5a9bc);
+}
+
+/* Footer styles */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    font-size: 20px;
+    margin-top: -50px;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+}
+
+/* Slide animation keyframes */
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/* Media query for screens up to 768px */
+@media only screen and (max-width: 768px) {
+    /* Center the logo */
+    .logo {
+        text-align: center;
+        margin-left: 30px;
+        margin-right: 30px;
+        color: #fff;
+        font-weight: 600;
+        font-size: 25px;
+        text-decoration: none;
+        cursor: default;
+        opacity: 0;
+        animation: slideRight 1s ease forwards;
+    }
+
+    /* Hamburger menu icon styles */
+    .hamburger {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 101; /* Ensure it's above the navigation */
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        background-color: transparent;
+        border: none;
+    }
+
+    /* Hamburger menu bar styles */
+    .hamburger .bar {
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        transition: all 0.3s ease;
+    }
+
+    /* Additional styles for active (open) hamburger menu */
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0; /* Hide middle bar when active */
+    }
+
+    .hamburger.active .bar:first-child {
+        transform: translateY(8px) rotate(45deg); /* Rotate first bar */
+    }
+
+    .hamburger.active .bar:last-child {
+        transform: translateY(-8px) rotate(-45deg); /* Rotate last bar */
+    }
+
+    /* Navigation links for smaller screens */
+    .navigation {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 70%;
+        background-color: #000;
+        padding-top: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    /* Show navigation links when active (open) */
+    .navigation.active {
+        transform: translateX(0%);
+    }
+
+    /* Navigation link styles */
+    .navigation a {
+        color: #fff;
+        font-size: 25px;
+        margin: 20px;
+        text-decoration: none;
+    }
+
+    /* Elem section styles for smaller screens */
+    .elem {
+        padding: 5% 70px 0; /* Add the appropriate unit (e.g., px) for the padding-right value */
+        margin-top: 180px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    /* Elem container styles for smaller screens */
+    .ec {
+        text-align: center;
+        margin-top: 50px;
+        order: 2;
+    }
+
+    /* Elem horizontal rule styles for smaller screens */
+    .ec hr {
+        width: 300px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    /* Elem heading styles for smaller screens */
+    .ec h3 {
+        font-size: 32px;
+        font-weight: 700;
+        opacity: 0;
+        animation: slideBottom 1s ease forwards;
+        animation-delay: .7s;
+        line-height: 30px;
+        margin-top: -10px;
+        animation-delay: .7s;
+        margin-right: 0;
+        line-height: 40px;
+    }
+
+    /* Elem paragraph styles for smaller screens */
+    .ec p {
+        font-size: 20px;
+        line-height: 1cm;
+        opacity: 0;
+        animation: slideRight 1s ease forwards;
+        animation-delay: 1s;
+        text-align: justify;
+        margin-bottom: 400px;
+        margin-left: 0;
+    }
+
+    /* Picture1 container styles for smaller screens */
+    .picture1 {
+        margin-left: 0;
+        padding-left: 0;
+        text-align: center;
+        animation: slideRight 1s ease forwards;
+        order: 1;
+        margin-bottom: -20px;
+        margin-top: 120;
+    }
+
+    /* Picture1 image styles for smaller screens */
+    .picture1 img {
+        width: 80%;
+        max-width: 500px;
+        height: auto;
+        border-radius: 50%;
+        border: 10px solid #cf9fff;
+        box-shadow: 0 0 20px rgba(125, 60, 255, 0.5),
+                    0 0 40px rgba(60, 177, 255, 0.7),
+                    0 0 80px rgba(125, 60, 255, 0.7),
+                    0 0 120px rgba(60, 177, 255, 0.7);
+        background: radial-gradient(violet, skyblue, #f5a9bc);
+    }
+
+    /* High section styles for smaller screens */
+    .high {
+        padding: 70px 5% 0;
+        margin-top: 90px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 300px;
+    }
+
+    /* Heading container styles for smaller screens */
+    .hc {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    /* Heading styles for smaller screens */
+    .hc h3 {
+        font-size: 32px;
+        font-weight: 700;
+        opacity: 0;
+        animation: slideBottom 1s ease forwards;
+        animation-delay: .7s;
+        line-height: 30px;
+        margin-top: -10px;
+        animation-delay: .7s;
+        margin-left: 0;
+        line-height: 40px;
+    }
+
+    /* Horizontal rule styles for smaller screens */
+    .hc hr {
+        width: 300px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    /* Paragraph styles for smaller screens */
+    .hc p {
+        font-size: 20px;
+        line-height: 1cm;
+        opacity: 0;
+        animation: slideRight 1s ease forwards;
+        animation-delay: 1s;
+        text-align: justify;
+        margin-top: 30px;
+        margin-right: 0;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    /* Picture container styles for smaller screens */
+    .picture {
+        margin-right: 0;
+        padding-right: 0;
+        text-align: center;
+        animation: slideRight 1s ease forwards;
+        margin-top: 10px;
+        margin-bottom: -20px;
+    }
+
+    /* Picture styles for smaller screens */
+    .picture img {
+        width: 80%;
+        max-width: 500px;
+        height: auto;
+        border-radius: 50%;
+        border: 10px solid #cf9fff;
+        box-shadow: 0 0 20px rgba(125, 60, 255, 0.5),
+                    0 0 40px rgba(60, 177, 255, 0.7),
+                    0 0 80px rgba(125, 60, 255, 0.7),
+                    0 0 120px rgba(60, 177, 255, 0.7);
+        background: radial-gradient(violet, skyblue, #f5a9bc);
+    }
+
+    /* College section styles for smaller screens */
+    .college {
+        padding: 70px 5% 0;
+        margin-top: 550px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Lc container styles for smaller screens */
+    .lc {
+        text-align: center;
+        margin-bottom: 50px;
+        order: 2;
+    }
+
+    /* Lc horizontal rule styles for smaller screens */
+    .lc hr {
+        width: 300px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    /* Lc heading styles for smaller screens */
+    .lc h3 {
+        font-size: 32px;
+        font-weight: 700;
+        opacity: 0;
+        animation: slideBottom 1s ease forwards;
+        animation-delay: .7s;
+        line-height: 30px;
+        margin-top: -10px;
+        animation-delay: .7s;
+        margin-right: 0;
+        line-height: 40px;
+    }
+
+    /* Lc paragraph styles for smaller screens */
+    .lc p {
+        font-size: 20px;
+        line-height: 1cm;
+        opacity: 0;
+        animation: slideRight 1s ease forwards;
+        animation-delay: 1s;
+        text-align: justify;
+        margin-bottom: 100px;
+        margin-left: 0;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    /* Picture2 container styles for smaller screens */
+    .picture2 {
+        padding-left: 0;
+        text-align: center;
+        animation: slideRight 1s ease forwards;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 80px;
+        order: 1;
+        margin-top: -20px;
+        margin-bottom: 20px;
+    }
+
+    /* Picture2 image styles for smaller screens */
+    .picture2 img {
+        width: 80%;
+        max-width: 500px;
+        height: auto;
+        border-radius: 50%;
+        border: 10px solid #cf9fff;
+        box-shadow: 0 0 20px rgba(125, 60, 255, 0.5),
+                    0 0 40px rgba(60, 177, 255, 0.7),
+                    0 0 80px rgba(125, 60, 255, 0.7),
+                    0 0 120px rgba(60, 177, 255, 0.7);
+        background: radial-gradient(violet, skyblue, #f5a9bc);
+    }
+
+    /* Footer styles for smaller screens */
+    footer {
+        display: none;
+    }
+}
